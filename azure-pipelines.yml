@@ -25,7 +25,4 @@ stages:
         repository: 'test47greatsaev'
         tags: |
           $(tag)
-    - task: AzureWebAppContainer@1
-      inputs:
-        azureSubscription: 'Azure subscription 1(1)(93af06e3-69c5-4841-95ad-aa4e171ad538)'
-        appName: 'test2-az-dev'
+
