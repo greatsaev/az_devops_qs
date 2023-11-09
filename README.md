@@ -40,16 +40,24 @@ Configure or review your pipeline and save it.
 
 ### 3. Configure triggers
 
-Edit pipeline - - - >
+#### Edit pipeline - - - >
 
 ![](./img/004_triggers.png)
 
-Enable CI and save pipeline
+#### Enable CI and save pipeline
 
 ![](./img/005_ci.png)
 
-if needed set condition, for e.g. defined tag:
+#### if needed set condition, for e.g. defined tag:
 
 ![](./img/005_filters.png)
 
 so tagged with trigger_tag1 will trigger pipeline
+
+### Run pipeline
+
+#### Push to repo in GitHub or manually trigger pipeline to run it.
+
+![](./img/006_run_pipeline.png)
+
+#### Check progress and logs
