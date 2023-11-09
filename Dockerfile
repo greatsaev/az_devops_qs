@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:latest AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:8.0 AS build-env
 
 COPY mslearn-tailspin-spacegame-web-main/Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj ./
 
@@ -8,7 +8,7 @@ COPY mslearn-tailspin-spacegame-web-main .
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:latest AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:8.0 AS runtime
 
 EXPOSE 80
 
