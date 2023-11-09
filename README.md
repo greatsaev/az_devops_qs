@@ -61,3 +61,5 @@ so tagged with trigger_tag1 will trigger pipeline
 ![](./img/006_run_pipeline.png)
 
 #### Check progress and logs
+
+![](./img/007_logs.png)
