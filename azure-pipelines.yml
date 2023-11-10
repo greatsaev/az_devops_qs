@@ -5,7 +5,7 @@ resources:
   - repo: self
 
 variables:
-  tag: "$(Build.BuildId)"
+  tag: "webapp-$(Build.BuildId)"
 
 stages:
   - stage: Build
@@ -25,3 +25,4 @@ stages:
               Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
               tags: |
                 $(tag)
+          
