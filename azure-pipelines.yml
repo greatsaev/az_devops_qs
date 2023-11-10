@@ -25,4 +25,16 @@ stages:
               Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
               tags: |
                 $(tag)
-          
+  - stage: Publish
+    displayName: publish
+    jobs:
+      - job: Publish
+        displayName: Publish
+        pool:
+          vmImage: ubuntu-latest
+        steps:        
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
+              appName: 'dotNet_sample_webapp'
+              containers: 'dot_net_webapp'
