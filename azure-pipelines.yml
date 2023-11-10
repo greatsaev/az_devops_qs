@@ -5,7 +5,7 @@ resources:
   - repo: self
 
 variables:
-  tag: "webapp-$(Build.BuildId)"
+  tag: "dot_net_webapp"
 
 stages:
   - stage: Build
