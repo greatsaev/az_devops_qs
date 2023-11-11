@@ -14,4 +14,4 @@ EXPOSE 80
 
 COPY --from=build-env /out .
 
-ENTRYPOINT [ "dotnet", "Tailspin.SpaceGame.Web.dll"]
+ENTRYPOINT  dotnet Tailspin.SpaceGame.Web.dll --urls http://0.0.0.0:80
