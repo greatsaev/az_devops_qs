@@ -37,5 +37,5 @@ stages:
             inputs:
               azureSubscription: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
               appName: 'dotNet-sample-webapp'
-              containers: 'dot_net_webapp'
+              containers: 'test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp'
               containerCommand: 'dotnet Tailspin.SpaceGame.Web.dll'
