@@ -14,7 +14,7 @@ Pipeline builds docker image and publish it to **Azure App Services**
 
    1. Free parallelism granted via [Azure DevOps Parallelism Request Form](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbR63mUWPlq7NEsFZhkyH8jChUMlM3QzdDMFZOMkVBWU5BWFM3SDI2QlRBSC4u)
 
-   2. **Azure DevOps Agent** deployed on linux vm elsewhere
+   2. **Azure DevOps Agent** deployed on linux vm elsewhere ( [target environment](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops#target-an-environment-from-a-deployment-job) )
 
 ## Steps
 
@@ -52,7 +52,7 @@ Configure or review your pipeline and save it.
 
 ![](./img/005_filters.png)
 
-so tagged with trigger_tag1 will trigger pipeline
+so tagged with _trigger_tag1_ will trigger pipeline
 
 ### Run pipeline
 
