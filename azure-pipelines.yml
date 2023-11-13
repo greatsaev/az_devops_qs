@@ -58,6 +58,7 @@ stages:
               -resourceGroupName $(resourceGroupName) -serverFarmResourceGroup $(resourceGroupName) -hostingPlanName "dotNet-sample-webapp-asp"'
               deploymentMode: 'Incremental'
       - job: Publish
+        dependsOn: deploy
         displayName: Publish
         pool:
           vmImage: ubuntu-latest
