@@ -54,7 +54,7 @@ stages:
               location: 'Italy North'
               templateLocation: 'Linked artifact'
               csmFile: '$(Build.SourcesDirectory)/arm_templates/app_services.json'
-              overrideParameters: '-name dotNet-sample-webapp -linuxFxVersion "DOCKER|test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp" -location "Italy North"'
+              overrideParameters: '-name dotNet-sample-webapp -linuxFxVersion "DOCKER|test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp" -location "Italy North" -subscriptionId $(subscriptionId)'
               deploymentMode: 'Incremental'
       - job: Publish
         displayName: Publish
