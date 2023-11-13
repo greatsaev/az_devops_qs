@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "serverfarms_test_asp_name": {
+        "serverfarms_dotnetweb_asp_name": {
             "defaultValue": "dotNet-sample-webapp-asp",
             "type": "String"
         }
