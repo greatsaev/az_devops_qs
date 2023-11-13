@@ -22,9 +22,6 @@
         },
         "linuxFxVersion": {
             "type": "string"
-        },
-        "dockerRegistryUrl": {
-            "type": "string"
         }
     },
     "variables": {},
