@@ -28,6 +28,34 @@ stages:
   - stage: Publish
     displayName: publish
     jobs:
+      - job: deploy
+        displayName: Prepare env
+        pool: 
+          vmImage: ubuntu-latest
+        steps:
+          - task: AzureResourceManagerTemplateDeployment@3
+            inputs:
+              deploymentScope: 'Resource Group'
+              azureResourceManagerConnection: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
+              subscriptionId: '93af06e3-69c5-4841-95ad-aa4e171ad538'
+              action: 'Create Or Update Resource Group'
+              resourceGroupName: 'dotNet-sample-webapp'
+              location: 'Italy North'
+              templateLocation: 'Linked artifact'
+              csmFile: '$(Build.SourcesDirectory)/arm_templates/app_service_plan.json'
+              deploymentMode: 'Incremental'
+          - task: AzureResourceManagerTemplateDeployment@3
+            inputs:
+              deploymentScope: 'Resource Group'
+              azureResourceManagerConnection: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
+              subscriptionId: '93af06e3-69c5-4841-95ad-aa4e171ad538'
+              action: 'Create Or Update Resource Group'
+              resourceGroupName: 'dotNet-sample-webapp'
+              location: 'Italy North'
+              templateLocation: 'Linked artifact'
+              csmFile: '''$(Build.SourcesDirectory)/arm_templates/app_services.json'
+              overrideParameters: '-name dotNet-sample-webapp -linuxFxVersion "DOCKER|test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp" -location "Italy North"'
+              deploymentMode: 'Incremental'
       - job: Publish
         displayName: Publish
         pool:
