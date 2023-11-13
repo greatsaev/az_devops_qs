@@ -65,10 +65,6 @@
                         {
                             "name": "DOCKER_REGISTRY_SERVER_USERNAME",
                             "value": "[parameters('dockerRegistryUsername')]"
-                        },
-                        {
-                            "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-                            "value": "[parameters('dockerRegistryPassword')]"
                         }
                     ]
                 },
