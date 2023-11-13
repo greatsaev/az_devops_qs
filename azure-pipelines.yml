@@ -34,6 +34,7 @@ stages:
           vmImage: ubuntu-latest
         steps:
           - task: AzureResourceManagerTemplateDeployment@3
+            displayName: Create app service plan
             inputs:
               deploymentScope: 'Resource Group'
               azureResourceManagerConnection: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
@@ -45,6 +46,7 @@ stages:
               csmFile: '$(Build.SourcesDirectory)/arm_templates/app_service_plan.json'
               deploymentMode: 'Incremental'
           - task: AzureResourceManagerTemplateDeployment@3
+            displayName: Create app service
             inputs:
               deploymentScope: 'Resource Group'
               azureResourceManagerConnection: 'Azure subscription 1(93af06e3-69c5-4841-95ad-aa4e171ad538)'
