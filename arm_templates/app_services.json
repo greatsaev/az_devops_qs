@@ -20,25 +20,10 @@
         "serverFarmResourceGroup": {
             "type": "string"
         },
-        "alwaysOn": {
-            "type": "bool"
-        },
-        "ftpsState": {
-            "type": "string"
-        },
         "linuxFxVersion": {
             "type": "string"
         },
         "dockerRegistryUrl": {
-            "type": "string"
-        },
-        "dockerRegistryUsername": {
-            "type": "string"
-        },
-        "dockerRegistryPassword": {
-            "type": "securestring"
-        },
-        "dockerRegistryStartupCommand": {
             "type": "string"
         }
     },
