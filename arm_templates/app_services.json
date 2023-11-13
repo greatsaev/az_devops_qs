@@ -48,34 +48,28 @@
             "apiVersion": "2018-11-01",
             "name": "[parameters('name')]",
             "type": "Microsoft.Web/sites",
+            "kind": "app,linux,container",
             "location": "[parameters('location')]",
             "tags": null,
             "dependsOn": [],
             "properties": {
                 "name": "[parameters('name')]",
-                "siteConfig": {
-                    "appSettings": [
+                "siteProperties": {
+                    "metadata": null,
+                    "properties": [
                         {
-                            "name": "DOCKER_REGISTRY_SERVER_URL",
-                            "value": "[parameters('dockerRegistryUrl')]"
+                            "name": "LinuxFxVersion",
+                            "value": "DOCKER|test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp"
                         },
                         {
-                            "name": "DOCKER_REGISTRY_SERVER_USERNAME",
-                            "value": "[parameters('dockerRegistryUsername')]"
-                        },
-                        {
-                            "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-                            "value": "[parameters('dockerRegistryPassword')]"
-                        },
-                        {
-                            "name": "WEBSITES_ENABLE_APP_SERVICE_STORAGE",
-                            "value": "false"
+                            "name": "WindowsFxVersion",
+                            "value": null
                         }
                     ],
-                    "linuxFxVersion": "[parameters('linuxFxVersion')]",
-                    "appCommandLine": "[parameters('dockerRegistryStartupCommand')]",
-                    "alwaysOn": "[parameters('alwaysOn')]",
-                    "ftpsState": "[parameters('ftpsState')]"
+                    "appSettings": null
+                },
+                "siteConfig": {
+                    "linuxFxVersion": "[parameters('linuxFxVersion')]"
                 },
                 "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "clientAffinityEnabled": false,

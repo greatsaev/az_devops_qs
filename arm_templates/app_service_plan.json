@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "serverfarms_test_asp_name": {
-            "defaultValue": "test-asp",
+            "defaultValue": "dotNet-sample-webapp-asp",
             "type": "String"
         }
     },
@@ -12,8 +12,8 @@
         {
             "type": "Microsoft.Web/serverfarms",
             "apiVersion": "2022-09-01",
-            "name": "[parameters('serverfarms_test_asp_name')]",
-            "location": "North Europe",
+            "name": "[parameters('serverfarms_dotnetweb_asp_name')]",
+            "location": "Italy North",
             "sku": {
                 "name": "F1",
                 "tier": "Free",

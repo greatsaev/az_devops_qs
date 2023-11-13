@@ -54,12 +54,30 @@ Configure or review your pipeline and save it.
 
 so tagged with _trigger_tag1_ will trigger pipeline
 
-### Run pipeline
+### 4. Run pipeline
 
 #### Push to repo in GitHub or manually trigger pipeline to run it.
 
 ![](./img/006_run_pipeline.png)
 
-#### Check progress and logs
-
+#### 5. Check progress and logs
+![](./img/012_pipeline_exec.png)
 ![](./img/007_logs.png)
+![](./img/013_act_log.png)
+
+
+### 6. Check app
+
+![](./img/013_act_log.png)
+
+### 7. Deploy with ARM templates
+
+#### Modify pipeline
+
+Add ARM Template deployment task
+
+![](./img/014_arm.png)
+
+Modify parameters
+
+![](./img/015_arm.png)
