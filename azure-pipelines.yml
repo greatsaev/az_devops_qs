@@ -58,7 +58,7 @@ stages:
               csmFile: '$(Build.SourcesDirectory)/arm_templates/app_services.json'
               overrideParameters: '-name dotNet-sample-webapp -linuxFxVersion "DOCKER|test47greatsaev.azurecr.io/test47greatsaev:dot_net_webapp" -location "Italy North" -subscriptionId "93af06e3-69c5-4841-95ad-aa4e171ad538"
               -resourceGroupName "dotNet-sample-webapp" -serverFarmResourceGroup "dotNet-sample-webapp" -hostingPlanName "dotNet-sample-webapp-asp"
-              -dockerRegistryUrl "https://test47greatsaev.azurecr.io" -dockerRegistryUsername "test47greatsaev" -dockerRegistryPassword "OTXQhdBwqONOjizY5KezKLmRdX2lsD2sKyMGaHP4L/+ACRBB5rYe"
+              -dockerRegistryUrl "https://test47greatsaev.azurecr.io" -dockerRegistryUsername "test47greatsaev" -dockerRegistryPassword $(dckr-reg-passwd)
               -dockerRegistryStartupCommand "dotnet Tailspin.SpaceGame.Web.dll --urls http://0.0.0.0:80"
               '
               deploymentMode: 'Incremental'
